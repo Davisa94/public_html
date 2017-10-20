@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE bsa SYSTEM "week06.dtd">
+<bsa>
+   <council name="Grand Teton Council">
+      <troop name="Coyote" number="1">
+         <scout>
+            <firstname>Joe</firstname>
+            <lastname>Biden</lastname>
+            <phone>432-124-8986</phone>
+            <address>
+               <street>108 Birch Street</street>
+               <city>Oklahoma</city>
+               <state>OK</state>
+            </address>
+            <rank date-earned="1/14/2003">Tenderfoot</rank>
+            <meritbadge date-earned="2/14/2003">First-Aid</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Jerry</firstname>
+            <lastname>Newman</lastname>
+            <phone>432-123-8956</phone>
+            <address>
+               <street>107 Birch street</street>
+               <city>Oklahoma</city>
+               <state>OK</state>
+            </address>
+            <rank date-earned="2/14/2003">Tenderfoot</rank>
+            <rank date-earned="4/14/2004">2nd Class</rank>
+            <meritbadge date-earned="2/14/2003">First-Aid</meritbadge>
+            <meritbadge date-earned="4/14/2004">Camping</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Joseph</firstname>
+            <lastname>Riddle</lastname>
+            <phone>432-145-5867</phone>
+            <address>
+               <street>112 Birch St</street>
+               <city>Oklahoma</city>
+               <state>OK</state>
+            </address>
+            <rank date-earned="2/14/2003">Tenderfoot</rank>
+            <meritbadge date-earned="2/14/2003">First-Aid</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Thomas</firstname>
+            <lastname>Riddle</lastname>
+            <phone>432-145-5867</phone>
+            <address>
+               <street>112 Birch St</street>
+               <city>Oklahoma</city>
+               <state>OK</state>
+            </address>
+            <rank date-earned="2/14/2003">Tenderfoot</rank>
+            <meritbadge date-earned="2/14/2003">First-Aid</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Barry</firstname>
+            <lastname>Wind</lastname>
+            <phone>432-453-0987</phone>
+            <address>
+               <street>112 Canoe St</street>
+               <city>Oklahoma</city>
+               <state>OK</state>
+            </address>
+            <rank date-earned="2/14/2003">Tenderfoot</rank>
+            <meritbadge date-earned="2/14/2003">First-Aid</meritbadge>
+            <meritbadge date-earned="4/14/2004">Camping</meritbadge>
+         </scout>
+      </troop>
+      <troop name="Dead Bird Patrol" number="2">
+         <scout>
+            <firstname>Joey</firstname>
+            <lastname>Trump</lastname>
+            <phone>402-345-0768</phone>
+            <address>
+               <street>101 Goergia Street</street>
+               <city>Tulsa</city>
+               <state>Ok</state>
+            </address>
+            <rank date-earned="4/15/2002">Tenderfoot</rank>
+            <meritbadge date-earned="4/15/2002">First-Aid</meritbadge>
+            <meritbadge date-earned="2/15/2003">Cooking</meritbadge>
+            <meritbadge date-earned="1/15/2003">Camping</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Donny</firstname>
+            <lastname>Trump</lastname>
+            <phone>402-345-0768</phone>
+            <address>
+               <street>101 Goergia Street</street>
+               <city>Tulsa</city>
+               <state>Ok</state>
+            </address>
+            <rank date-earned="4/15/2002">Tenderfoot</rank>
+            <rank date-earned="2/15/2003">2nd Class</rank>
+            <meritbadge date-earned="4/15/2002">First-Aid</meritbadge>
+            <meritbadge date-earned="2/15/2003">Cooking</meritbadge>
+         </scout>
+         <scout>
+            <firstname>George</firstname>
+            <lastname>Cole</lastname>
+            <phone>402-321-0231</phone>
+            <address>
+               <street>1069 Blessed Street</street>
+               <city>Tulsa</city>
+               <state>Ok</state>
+            </address>
+            <rank date-earned="4/15/2002">Tenderfoot</rank>
+            <meritbadge date-earned="4/15/2002">First-Aid</meritbadge>
+            <meritbadge date-earned="2/15/2003">Cooking</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Gregory</firstname>
+            <lastname>Castle</lastname>
+            <phone>402-302-8975</phone>
+            <address>
+               <street>1110 Blessed Street</street>
+               <city>Tulsa</city>
+               <state>Ok</state>
+            </address>
+            <rank date-earned="4/15/2002">Tenderfoot</rank>
+            <meritbadge date-earned="4/15/2002">First-Aid</meritbadge>
+            <meritbadge date-earned="2/15/2003">Cooking</meritbadge>
+            <meritbadge date-earned="4/15/2003">Camping</meritbadge>
+         </scout>
+         <scout>
+            <firstname>John</firstname>
+            <lastname>Brown</lastname>
+            <phone>402-310-6784</phone>
+            <address>
+               <street>365 Square Street</street>
+               <city>Tulsa</city>
+               <state>Ok</state>
+            </address>
+            <rank date-earned="4/15/2002">Tenderfoot</rank>
+            <meritbadge date-earned="4/15/2002">First-Aid</meritbadge>
+            <meritbadge date-earned="2/15/2003">Cooking</meritbadge>
+         </scout>
+      </troop>
+   </council>
+   <council name="Black Warrior Council">
+      <troop name="Banana Slugs" number="3">
+         <scout>
+            <firstname>Jeremy</firstname>
+            <lastname>Hadfield</lastname>
+            <phone>673-893-6793</phone>
+            <address>
+               <street>107 Baker Street</street>
+               <city>Springfield</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="8/14/2001">Tenderfoot</rank>
+            <meritbadge date-earned="8/14/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="5/19/2001">Canoeing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Joseph</firstname>
+            <lastname>Hadfield</lastname>
+            <phone>673-893-6793</phone>
+            <address>
+               <street>107 Baker Street</street>
+               <city>Springfield</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="4/1/2003">Tenderfoot</rank>
+            <meritbadge date-earned="4/1/2003">First-Aid</meritbadge>
+            <meritbadge date-earned="5/21/2005">Canoeing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Hugh</firstname>
+            <lastname>Nibly</lastname>
+            <phone>673-475-3897</phone>
+            <address>
+               <street>467 Baker Street</street>
+               <city>Springfield</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="8/14/2001">Tenderfoot</rank>
+            <rank date-earned="11/18/2003">2nd Class</rank>
+            <meritbadge date-earned="8/14/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="5/19/2001">Canoeing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Jordan</firstname>
+            <lastname>Maron</lastname>
+            <phone>673-462-6987</phone>
+            <address>
+               <street>187 Fly Street</street>
+               <city>Springfield</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="8/14/2001">Tenderfoot</rank>
+            <meritbadge date-earned="8/14/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="5/19/2001">Canoeing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Tai</firstname>
+            <lastname>Harris</lastname>
+            <phone>673-219-3895</phone>
+            <address>
+               <street>295 Huck Street</street>
+               <city>Springfield</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="8/14/2001">Tenderfoot</rank>
+            <meritbadge date-earned="8/14/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="5/19/2001">Canoeing</meritbadge>
+         </scout>
+      </troop>
+      <troop name="Thunder Bison" number="4">
+         <scout>
+            <firstname>Keneth</firstname>
+            <lastname>Orion</lastname>
+            <phone>332-987-6584</phone>
+            <address>
+               <street>162 Branson Street</street>
+               <city>Joplin</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="1/20/2001">Tenderfoot</rank>
+            <meritbadge date-earned="1/19/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="4/12/2001">Camping</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Harry</firstname>
+            <lastname>White</lastname>
+            <phone>332-289-8754</phone>
+            <address>
+               <street>1726 Lee Street</street>
+               <city>Joplin</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="1/20/2001">Tenderfoot</rank>
+            <meritbadge date-earned="1/19/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="4/12/2001">Camping</meritbadge>
+            <meritbadge date-earned="4/12/2001">Canoeing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Joseph</firstname>
+            <lastname>O'Fallon</lastname>
+            <phone>332-378-9763</phone>
+            <address>
+               <street>1826 Jefferson Street</street>
+               <city>Joplin</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="1/20/2001">Tenderfoot</rank>
+            <meritbadge date-earned="1/19/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="4/12/2001">Camping</meritbadge>
+            <meritbadge date-earned="4/12/2001">Fishing</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Nephi</firstname>
+            <lastname>Brown</lastname>
+            <phone>332-475-0786</phone>
+            <address>
+               <street>286 Cape Street</street>
+               <city>Joplin</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="1/19/2001">Tenderfoot</rank>
+            <rank date-earned="1/19/2003">2nd Class</rank>
+            <meritbadge date-earned="4/12/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="4/12/2001">Camping</meritbadge>
+            <meritbadge date-earned="4/12/2001">Fishing</meritbadge>
+            <meritbadge date-earned="6/12/2001">Cooking</meritbadge>
+            <meritbadge date-earned="6/19/2001">Swimming</meritbadge>
+            <meritbadge date-earned="3/1/2001">Family-Life</meritbadge>
+            <meritbadge date-earned="4/12/2001">Hiking</meritbadge>
+            <meritbadge date-earned="1/19/2001">Cycling</meritbadge>
+            <meritbadge date-earned="7/11/2003">Archery</meritbadge>
+            <meritbadge date-earned="6/35/2003">Energy</meritbadge>
+            <meritbadge date-earned="4/12/2001">Fire-Safety</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Alma</firstname>
+            <lastname>Brown</lastname>
+            <phone>332-475-0786</phone>
+            <address>
+               <street>286 Cape Street</street>
+               <city>Joplin</city>
+               <state>MO</state>
+            </address>
+            <rank date-earned="1/19/2001">Tenderfoot</rank>
+            <rank date-earned="1/19/2003">2nd Class</rank>
+            <meritbadge date-earned="4/12/2001">First-Aid</meritbadge>
+            <meritbadge date-earned="4/12/2001">Camping</meritbadge>
+            <meritbadge date-earned="4/12/2001">Canoeing</meritbadge>
+            <meritbadge date-earned="6/12/2001">Cooking</meritbadge>
+            <meritbadge date-earned="6/19/2001">Swimming</meritbadge>
+            <meritbadge date-earned="3/1/2001">Family-Life</meritbadge>
+            <meritbadge date-earned="4/12/2001">Hiking</meritbadge>
+            <meritbadge date-earned="1/19/2001">Cycling</meritbadge>
+            <meritbadge date-earned="7/11/2003">Archery</meritbadge>
+            <meritbadge date-earned="6/35/2003">Energy</meritbadge>
+            <meritbadge date-earned="4/12/2001">Fire-Safety</meritbadge>
+         </scout>
+      </troop>
+   </council>
+</bsa>

@@ -1,0 +1,4 @@
+for each select
+<xsl: apply-templates>
+	<xsl:sort select attrib_name>
+</xsl:apply-templates>

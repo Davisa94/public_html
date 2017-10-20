@@ -1,0 +1,144 @@
+body{
+   background-color: lightblue;
+   background-image: url("./img/squared_metal.png");
+}
+#container {
+   background-color: rgba(#eeeeee, 0);
+}
+#heading {
+   background: rgba(54, 98, 255, 0.47);
+   background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13) 100%);
+   background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13) 100%);
+   background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13) 100%);
+   background: linear-gradient(to right, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13)  100%);
+   font-family: "Bookman", serif;
+   color: #020a14;
+   text-align: center;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 180%;
+}
+p.heading{
+   font-size: 75%;
+   font-style: italic;
+   margin-top: -30px;
+
+}
+#form{
+   background: rgba(54, 152, 255, 0.47);
+   background: -moz-linear-gradient(left, rgba(114, 194, 252, 0.42) 0%, rgba(54, 134, 255, 0.59) 50%, rgba(114, 194, 252, 0.42) 100%);
+   background: -webkit-linear-gradient(left, rgba(114, 194, 252, 0.42) 0%, rgba(54, 134, 255, 0.59) 50%, rgba(114, 194, 252, 0.42) 100%);
+   background: -ms-linear-gradient(left, rgba(114, 194, 252, 0.42) 0%, rgba(54, 134, 255, 0.59) 50%, rgba(114, 194, 252, 0.42) 100%);
+   background: linear-gradient(to right, rgba(114, 194, 252, 0.42) 0%, rgba(54, 134, 255, 0.59) 50%, rgba(114, 194, 252, 0.42)  100%);
+   font-family: "Bookman", serif;
+   color: #020a14;
+   text-align: left;
+   font-weight: bold;
+   padding: 10px;
+   margin: 10px;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 75%;
+   float: center;
+}
+.container{
+   display: flex;
+
+}
+.box{
+   flex-grow: auto;
+}
+.minibox{
+   font-size: 70%;
+}
+.two{
+   align-items: stretch;
+   margin-left: 100px;
+   flex grow:auto;
+}
+.button{
+ font-family: Corben, serif;
+ background-color: rgba(7, 39, 152, 0.92);
+ background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.67) 50%, rgba(59, 113, 251, 0.42) 100%);
+ background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.67) 50%, rgba(59, 113, 251, 0.42) 100%);
+ background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.67) 50%, rgba(59, 113, 251, 0.42) 100%);
+ background: linear-gradient(to right, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.67) 50%, rgba(59, 113, 251, 0.42)  100%);
+ border: none;
+ color: black;
+ margin-left: 8px;
+ margin-right: 8px;
+ padding: 15px 55px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer;
+ transition: all 0.3s ease 0.2;
+}
+.button:hover {
+  background:  rgba(54, 98, 255, 0.67);
+}
+#options{
+   text-align: center;
+   margin-top: -20px;
+   background: rgba(54, 98, 255, 0.47);
+   background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.06) 0%, rgba(54, 98, 255, 0.37) 50%, rgba(59, 113, 251, 0.06) 100%);
+   background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.06) 0%, rgba(54, 98, 255, 0.37)50%, rgba(59, 113, 251, 0.06) 100%);
+   background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.06) 0%, rgba(54, 98, 255, 0.37)50%, rgba(59, 113, 251, 0.06) 100%);
+   background: linear-gradient(to right, rgba(59, 113, 251, 0.06) 0%, rgba(54, 98, 255, 0.37)50%, rgba(59, 113, 251, 0.06)  100%);
+}
+p.main{
+   padding-top: -15px;
+}
+#main{
+   background: rgba(54, 98, 255, 0.47);
+   background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: linear-gradient(to right, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42)  100%);
+   font-family: "Bookman", serif;
+   color: #020a14;
+   text-align: left;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 180%;
+   float: center;
+}
+#supernav{
+   background: rgba(0, 62, 249, 0.79);
+   font-family: serif;
+   color: #020a14;
+   text-align: center;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 115%;
+   float: center;
+   margin:auto;
+}
+h1.center, p.center{
+   text-align: center;
+   font-size: 100%;
+}
+li.services{
+   font-style: oblique;
+   font-weight: bold;
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+p.servdesc{
+   font-weight: normal;
+   text-align: center;;
+   font-size: 75%;
+}
+#footer{
+   background: rgba(54, 98, 255, 0.47);
+   background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
+   background: linear-gradient(to right, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42)  100%);
+   font-family: serif;
+   color: #020a14;
+   text-align: center;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 115%;
+   float: center;
+   margin:auto;
+}

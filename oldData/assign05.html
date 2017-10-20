@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang = "en" >
+   <head>
+      <title>Tax Services Sign Up</title>
+      <link rel="stylesheet" type="text/css" href="../styles.css"/>
+   <style>
+   </style>
+      <meta charset = "utf-8" />
+      <title> Austin Davis's Week 5 </title>
+   </head>
+   <body style = "text-align: center;">
+      <script>
+      var userName;
+      function setUserFirst(value)
+      {
+         userName = value;
+      }
+      function setUserLast(value)
+      {
+         userName += " " + value;
+      }
+      function resetForm()
+      {
+         document.getElementById("form1").reset();
+      }
+      function total()
+      {
+         // var premiumtaxrate = document.getElementById(premiumtaxrate).value;
+         // var premiumtaxamt = document.getElementById(premiumtaxamt).value;
+         // var basictaxrate = document.getElementById(basictaxrate).value;
+         // var basictaxamt = document.getElementById(); premacctrate; premacctamt; basicacctrate; basicacctamt;
+         // document.getElementById(premiumtaxrate).value
+      }
+      function checkField(elCheck)
+      {
+         if(elCheck.name == "name")
+         {
+             if(elCheck.value.match(/\D[A-Za-z]/))
+            {
+               console.log("Match");
+               document.getElementById("nameERR").innerHTML = "";
+            }
+             else
+             {
+               console.log("No Match");
+               document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
+               }
+         }
+         if(elCheck.name == "phoneNum")
+         {
+            valToCheck = elCheck.value.replace('-', '');
+            if(valToCheck.match(''))
+            {
+               console.log("Empty");
+               document.getElementById("phoneERR").innerHTML = "Please Enter A Phone Number</br>";
+               document.getElementById("phoneNum").focus();
+            }
+            else
+            {
+               if(valToCheck.match(/\d(10)[^A-Za-z]/))
+               {
+                  console.log("Match");
+                  document.getElementById("phoneERR").innerHTML = "";
+               }
+               else
+               {
+                 console.log("No Match");
+                 document.getElementById("phoneERR").innerHTML = "INVALID PHONE NUMBER</br>";
+                 document.getElementById("phoneNum").focus();
+                 }
+            }
+
+         }
+
+         if(elCheck.name == "cardNum")
+         {
+            valToCheck = elCheck.value.replace('-', '');
+            if(valToCheck == "")
+            {
+               console.log("Empty");
+               document.getElementById("cardERR").innerHTML = "Please Enter A Card Number</br>";
+               document.getElementById("cardNum").focus();
+            }
+            else
+            {
+               document.getElementById("cardERR").innerHTML = "";
+               if((valToCheck.match(/\d[^A-Za-z]/)) && valToCheck.length == 16)
+               {
+                  console.log("Match");
+                  document.getElementById("cardERR").innerHTML = "";
+               }
+               else
+               {
+                 console.log("No Match");
+                 document.getElementById("cardERR").innerHTML = "INVALID CARD NUMBER</br>";
+                 document.getElementById("cardNum").focus;
+               }
+            }
+
+         }
+          /*   var condition = /\D[A-Za-z]/;
+         for(i = 0; i < elCheck.value.length; i++)
+         {
+            if(elCheck.value[i] == condition)
+         }
+            if(elCheck.value.match(condition))
+            {
+
+            }
+            else
+            {
+               document.getElementById("firstname").innerHTML = "PLEASE ENTER A VALID NAME";
+               document.getElementById("firstname").placholder = 'PLEASE ENTER A VALID NAME';
+               elCheck.focus();
+            }
+         }
+         if(elCheck.name == "idnum")
+         {
+            var condition = /\d[^A-Za-z]/;
+            if(elCheck.value.match(condition))
+            {
+
+            }
+            else
+            {
+               elCheck.placholder = 'PLEASE ENTER A VALID NUMBER';
+               elCheck.focus();
+            }
+         }
+         if(elCheck.name == "date")
+         {
+            for(i = 1; i < elCheck.date.value.size(); i++)
+            {
+               if(i <= 2)
+               {
+
+               }
+               else
+               {
+
+               }
+            }
+            if(elCheck.value.match(condition))
+            {
+
+            }
+            else
+            {
+               elCheck.focus();
+            }
+         } */
+      }
+      function checkForm(form)
+      {
+
+      }
+      function setfocus()
+      {
+         document.getElementById("firstname").focus();
+      }
+      function thanks()
+      {
+
+      }
+
+      </script>
+      <div id="container">
+         <div id="heading">
+            <h1 class="heading"> Texas Tax Service</h1>
+            <p class="heading">
+                So accurate you won't need a second opinion
+            <p/>
+         </div>
+         <div id="options">
+            <ul>
+               <a href="#footer" class="button">Contact Us</a>
+               <a href ="week03_services.html" class="button"> Our Services</a>
+               <a href ="week03.html" class="button"> Homepage</a>
+            </ul>
+         </div>
+         <div id="main">
+            <h1 style="text-align: center; font-size:150%;">
+               Sign Up
+            </h1>
+            <a style = "font-size: 160%;">Pick Your Services:</a><br/>
+            <div class="container" id = "form">
+               <form onreset="thanks()" onsubmit="checkForm(this)">
+                  <div class="box one">
+                  <h2>Your Info: <br/></h2>
+                  <a>Name: <br/></a>
+                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
+                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onblur="checkField(this); setUserFirst(this.value);">
+                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onblur="checkField(this); setUserLast(this.value);">
+               <br/>
+                  <a>Address: <br/></a>
+                  <textarea placeholder="Address" rows = "4" cols = "41" name = "address" id = "address" onblur="checkField(this);"></textarea>
+               <br/>
+               <a>Cell Phone: <br/></a>
+               <span id="phoneERR" style="font-size: 75%; color:red;"></span>
+                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onblur="checkField(this);" />
+               <br/>
+               <a>Credit Card Number: <br/></a>
+               <span id="cardERR" style="font-size: 75%; color: red;"></span>
+                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onblur="checkField(this);" />
+               <br/>
+               <a>Credit Card Expiration Date: <br/></a>
+                  <input placeholder="MM/YYYY" name="date" id="date" type="text" onblur="checkField(this);" />
+               <br/>
+               <a>Credit Card Type: <br/></a>
+                  <div class="container">
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">Visa<br/></a>
+                        <input type="radio" name="cardType"/>
+                     </div>
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">MasterCard<br/></a>
+                        <input type="radio" name="cardType"name="cardType"/>
+                     </div>
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">American Express<br/></a>
+                        <input type="radio" name="cardType"/>
+                     </div>
+                  </div>
+
+               </form>
+               </div>
+               <div class="box two">
+               <h2>Choose your services: <br/></h2>
+
+               <form onreset="thanks()" onsubmit="checkForm(this)">
+               <a>Premium Tax Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="premiumtaxrate" value = "50.00" id="premiumtaxrate">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premiumtaxamt" value = "" id="premiumtaxamt" onblur="checkField(this);">
+                  </div>
+               </div>
+               <a>Basic Tax Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="basictaxrate" value = "25.00" id="basictaxrate">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="lastname" value = "" id="basictaxamt" onblur="checkField(this); setUserLast(this.value);">
+                  </div>
+               </div>
+               <a>Premium Accounting Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="premacctrate" value = "15.00" id="premacctrate">
+                  </div>
+                  <div class="box">
+                     <a￼ class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt" onblur="checkField(this);">
+                  </div>
+               </div>
+               <a>Basic Accounting Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="basicacctrate" value = "10.00" id="basicacctrate">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt" onblur="checkField(this);">
+                  </div>
+               </div>
+               <a style="text-align:center;">==========================</a><br/>
+               <a>Totals: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="totalamt" value = "" id="totalamt">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input disabled="true" placeholder="" style = "align:right;" type="text" name="totalhour" value = "" id="totalhour" onblur="checkField(this); setUserLast(this.value);">
+                  </div>
+               </div>
+            <br/>
+            </form>
+            </div>
+            </div>
+            <td style="text-align:center">
+            <input type="button" class="button" id = "calc" onclick="total()" value="Sign Up and Purchase">
+            <input type="button" class="button" name="reset" value ="Reset" onclick="resetForm()">
+            </td>
+         </div>
+         <div id="footer">
+            <p style="text-align:left;">Contact Us:</p>
+            <ul style="list-style-type:none">
+               <li>
+                  Phone: 123-243-567
+               </li>
+               <li>
+                  Fax: 123-243-765
+               </li>
+               <li>
+                  Email: TexasTax@texasTaxes.com
+               </li>
+            </ul>
+      </div>
+      <div id="supernav">
+         <a href="index.html" class="button">CS 213 Weeks</a>
+      </div>
+
+      <a href = "http://regexr.com/">The help SIte</a>
+   </body>
+   </html>

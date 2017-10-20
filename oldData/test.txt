@@ -1,0 +1,8 @@
+This is a text file
+
+<a href = "insert link here"
+   <img src = "picture.jpg" alt = "a picture of a picture" />
+   <p> THis also works for the link</p>
+</a>
+<a href = "#top"/a>
+<h1 id = "top" > CONTENT 212233ewe</h1>

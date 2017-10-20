@@ -1,0 +1,90 @@
+''
+responseText
+responseXML
+status returns a number
+status text returns the text for the code given from the previous
+<script>
+var httpRequest
+function makeRequest()url)
+{
+      httpRequest = false;
+      httpRequest = new XMLHttpRequest();
+
+      if(!htttpRequest)
+      {
+         alert ("error: your browser does not support xml - HTTP");
+         return false;
+      }
+      else
+      {
+         httpRequest.onreadystatechange = alertControls;
+         httpRequest.open("GET", urlrequested, true);//true is for ascynchronous
+         httpRequest.send();
+      }
+}
+function alertControls()
+{
+   if(httpRequest.readyState == 4)
+   {
+      if(httpRequest.status == 200)
+      {
+         var myText = httpRequest.responseText;
+
+      }
+      else
+      {
+         alert('There was a problem with the request.');
+         alert(httpRequest.status);
+      }
+   }
+}
+//another example
+function loadDoc()
+{
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200)
+      {
+         document.getElementById("demo").innerHTML = this.responseText;
+      }
+   }
+   xhttp.open("GET", ajax_info.txt, true)
+   xhttp.send()
+}
+ajax only works on the server
+function loadDoc(url, cFunction)
+{
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200)
+      {
+         document.getElementById("demo").innerHTML = this.responseText;
+      }
+   }
+   xhttp.open("GET", ajax_info.txt, true)
+   xhttp.send()
+}
+</script>
+
+RESPONSEtEXT RETURNS THE http response as a string.
+responseXML returns the response as xml.
+function processReqChange()
+{
+   if(req.readyState == 4)
+   {
+      var xmlDoc = req.responseXML;
+
+   var nameText = xmlDoc.getElementsByTagName("college")[0].firstChild.nodeValue;
+   }
+   else
+   {
+      alert("there was a problem retrieving the XML data:\n" + req.statusText);
+   }
+}
+xml node hierarchy:
+document node
+   each xml element is a node
+      Each text in each tag is a node
+         each attribute is a node
+            comments are in a comment node.
+            getElementByTagName{'a'}[0]=.getAttributeNode;

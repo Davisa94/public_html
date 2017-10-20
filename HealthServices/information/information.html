@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang = "en" >
+   <head>
+      <title>Tax Services Sign Up</title>
+      <link rel="stylesheet" type="text/css" href="../styles.css"/>
+   <style>
+   </style>
+      <meta charset = "utf-8" />
+      <title> Austin Davis's Assignment 10 </title>
+   </head>
+   <body style = "text-align: center;">
+      <div id="container">
+         <div id="heading">
+            <h1 class="heading"> Health Insurance Helper</h1>
+            <p class="heading">
+                Some more text here
+            </p>
+         </div>
+         <div id="options">
+            <ul>
+               <a href="#footer" class="button">Contact Us</a>
+               <a href ="../assign03_services.html" class="button"> Our Services</a>
+               <a href ="../index.html" class="button"> Homepage</a>
+            </ul>
+         </div>
+         <div id="main">
+            <h1 style="text-align: center; font-size:150%;">
+               Health Insurance Information
+            </h1>
+
+            <div class="container" id = "form">
+                  <div class="box one">
+                     <h2>Box One:</h2>
+                  <div class="container">
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">Mini Box<br/></a>
+                     </div>
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">Mini Box<br/></a>
+                     </div>
+                     <div class="box" style = "margin-left:5px; margin-right:5px;">
+                        <a class = "minibox">Mini Box<br/></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="box two">
+               <h2>Box Two: <br/></h2>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Mini Box<br/>
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                  </div>
+               </div>
+               <a>Basic Tax Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                  </div>
+               </div>
+               <a>Premium Accounting Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="premacctrate" value = "15.00" id="premacctrate">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt" onblur="checkField(this);">
+                  </div>
+               </div>
+               <a>Basic Accounting Service: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="basicacctrate" value = "10.00" id="basicacctrate">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt" onblur="checkField(this);">
+                  </div>
+               </div>
+               <a style="text-align:center;">==========================</a><br/>
+               <a>Totals: <br/></a>
+               <div class="container">
+                  <div class="box">
+                     <a class = "minibox">Service Price (per Hour):<br/></a>
+                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="totalamt" value = "" id="totalamt">
+                  </div>
+                  <div class="box">
+                     <a class = "minibox">Estimated Hours Needed:<br/></a>
+                     <input disabled="true" placeholder="" style = "align:right;" type="text" name="totalhour" value = "" id="totalhour" onblur="checkField(this); setUserLast(this.value);">
+               </div>
+            <br/>
+
+            </div>
+            </div>
+            <td style="text-align:center">
+            <input type="submit" class="button" id = "calc" onclick="total()" value="Sign Up and Purchase">
+            <input type="button" class="button" name="reset" value ="Reset" onclick="resetForm()">
+            </td>
+            </form>
+         </div>
+         <div id="footer">
+            <p style="text-align:left;">Contact Us:</p>
+            <ul style="list-style-type:none">
+               <li>
+                  Phone: 123-243-567
+               </li>
+               <li>
+                  Fax: 123-243-765
+               </li>
+               <li>
+                  Email: TexasTax@texasTaxes.com
+               </li>
+            </ul>
+      </div>
+      <div id="supernav">
+         <a href="../index.html" class="button">CS 213 Assignments</a>
+      </div>
+
+      <!-- <a href = "http://regexr.com/">The help SIte</a> -->
+   </body>
+   </html>

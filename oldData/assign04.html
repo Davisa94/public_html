@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang = "EN" >
+
+<head>
+   <style>
+   table{
+      border-collapse: collapse;
+   }
+   table, td, th {
+      border: 4px;
+      border-style: outset;
+      border-color: blue;
+   }
+   </style>
+   <title>Page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+
+   <div id="main">
+
+      <table
+      align = "center"
+      style = "align: center;
+               font-size: 120%;"
+      >
+      <script>
+      function resetForm()
+      {
+         document.getElementById("form1").reset();
+      }
+         function calcPayment()
+         {
+            var pleaseSet = "";
+            var apr = document.getElementById("apr").value;
+            if(!apr)
+            {
+               pleaseSet += "Please Input APR \n";
+            }
+            apr = apr/100;
+            apr = apr/12;
+            var term = document.getElementById("term").value;
+            if(!term)
+            {
+               pleaseSet += "Please Input a Term in Years\n";
+            }
+            term = term*12;
+            var amount = document.getElementById("amount").value;
+            if(!amount)
+            {
+               pleaseSet += "Please Input a loan amount in dollars";
+            }
+            var final = amount*((apr*Math.pow((1 + apr),term) / (Math.pow((1 + apr), term )- 1)));
+            console.log(final);
+            final = final.toFixed(2);
+            if(!pleaseSet)
+            {
+               document.getElementById("monthPay").value = final;
+            }
+            else
+            {
+               alert(pleaseSet);
+            }
+         }
+      </script>
+         <tr
+         style = "border: 2px blue;"
+         >
+            <th> Morgate Loan Calculator</th>
+         </tr>
+         <tr>
+            <td>
+               <form id = "form1">
+                  APR:  <input placeholder="%, ie 5.6" style = "align:right;" type="text" name="apr" id="apr" onblur="apr = document.getElementById('apr').value"> %<br/>
+                  Loan Term: <input placeholder="Years of loan" style = "align:right;" type="text" name="lTerm" id ="term"> Years<br/>
+                  Loan Amount: $<input placeholder="Amount in dollars" style = "align:right;" type="text" name="lTerm" id ="amount"><br/>
+                  Monthly Payment: $<input disabled="1" style = "align:right;" type="text" name="firstname" id="monthPay" value="">
+               <br/>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align:center">
+            <input type="button" class="button" id = "calc" onclick="calcPayment()" value="Calculate Payment">
+            <input type="button" class="button" name="reset" value ="Reset" onclick="resetForm()">
+            </td>
+         </tr>
+      </table>
+
+   </div>
+   <div style = "text-align: right;">
+      <a href="index.html" class="button">CS 213 Weeks</a>
+   </div>
+</body>
+</html>

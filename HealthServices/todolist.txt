@@ -1,0 +1,7 @@
+Step one homepage:
+fade in (in this order):
+(1)Welcome to the Health Insurance Helper [heading]
+(2) Would you like to learn more about Health insurances [smaller heading aligned right]
+(3 fade in with previous one): [button]-links to an informational page with video of a presentation and more information about various insurances.{use #id links to use one page with all info to allow users to jump to a specific section}
+(4) Or would you just like to use our Service Finder [smaller heading aligned left]
+(5 fade in with previous one): [button]-links to the first page of the Service Finder.
