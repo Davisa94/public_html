@@ -1,0 +1,2 @@
+* add check field for each component
+*create function to say Please enter a BLANK when the field is empty and its clicked away

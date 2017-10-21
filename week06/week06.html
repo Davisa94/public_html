@@ -42,11 +42,11 @@
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
 		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onblur="checkName(this); setUserFirst(this.value);">
-		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onblur="checkName(this); setUserLast(this.value);">
+		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this); setUserLast(this.value);">
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onblur="checkAge(this)"/>
+								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this)"/>
 		               <br/>
 		                  <a>Social Security Number: <br/></a>
 		                  <input placeholder="000-00-0000" name = "ssn" id = "ssn" onblur="checkField(this);"></input>

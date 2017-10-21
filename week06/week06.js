@@ -28,12 +28,16 @@ function checkName(name)
    }
 }
 
+/**************************************
+* Validates that a proper age is input
+* between the ages  of 0 and 118
+* *************************************/
 function checkAge(age)
 {
-   if(age.value.match(/\d{1,2}[^A-Za-z]/))
+   if(age.value.match(/\d{0,2}[^A-Za-z]/) && age.value <= 118)
    {
-      console.log("Age Match");
-      document.getElementById("ageERR").innerHTML = "";
+         console.log("Age Match");
+         document.getElementById("ageERR").innerHTML = "";
    }
    else
    {
@@ -42,8 +46,29 @@ function checkAge(age)
    }
 }
 
+/**************************************
+* Validates that a proper Social
+* security is entered
+* *************************************/
+function socialCheck(social)
+{
+   if(social.value.match(/\d{0,2}[^A-Za-z]/) && age.value <= 118)
+   {
+         console.log("Age Match");
+         document.getElementById("socialERR").innerHTML = "";
+   }
+   else
+   {
+      console.log("No Match");
+      document.getElementById("socialERR").innerHTML = "INVALID AGE</br>";
+   }
+}
 function checkField(elCheck)
 {
+   // if(elCheck.value == "")
+   // {
+   //    document.getElementById(elCheck).innerHTML = "Please enter an" + elCheck;
+   // }
    if(elCheck.name == "phoneNum")
    {
       valToCheck = elCheck.value.replace('-', '');
