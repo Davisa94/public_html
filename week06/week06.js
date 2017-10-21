@@ -30,7 +30,7 @@ function checkName(name)
 
 function checkAge(age)
 {
-   if(name.value.match(/\d{1,2}[^A-Z^a-z]/))
+   if(name.value.match(/\d{1,2}[^A-Z^a-z]/g))
    {
       console.log("Age Match");
       document.getElementById("ageERR").innerHTML = "";
