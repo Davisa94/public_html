@@ -27,6 +27,19 @@ function checkName(name)
       document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
    }
 }
+function checkAge(age)
+{
+   if(name.value.match(/\d[^A-Z^a-z]{1,2}/))
+   {
+      console.log("Match");
+      document.getElementById("ageERR").innerHTML = "";
+   }
+   else
+   {
+      console.log("No Match");
+      document.getElementById("ageERR").innerHTML = "INVALID AGE</br>";
+   }
+}
 
 function checkField(elCheck)
 {
