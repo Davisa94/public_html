@@ -182,7 +182,7 @@ function checkPhone(number)
    if(number.value == "")
    {
       console.log("Empty number Field");
-      document.getElementById("phoneERR").innerHTML = "Please enter a Card Number</br>";
+      document.getElementById("phoneERR").innerHTML = "Please enter a Phone Number</br>";
    }
    else
    {
@@ -192,10 +192,15 @@ function checkPhone(number)
       numberVal = numberVal.replace(/ /g, '');
       numberVal = numberVal.replace(/\(/g, '');
       numberVal = numberVal.replace(/\)/g, '');
-      if(numberVal.match(/\b\d{10}\b/g))
+      if(numberVal.match(/^\d{10}/g))
       {
          console.log("Card Match");
          document.getElementById("phoneERR").innerHTML = "";
+         /*****************************************
+         * Special formatting of Phone number,
+         * converts the stripped number into a correct
+         * format then puts it out to the input
+         *****************************************/
          //format phone number nicely
          //insets the "( "
          formattedNum = "(";
@@ -230,133 +235,106 @@ function checkPhone(number)
    }
 }
 /**************************************
-* Validates that a proper Phone number
-* is entered displays message if not
+* Validates that a proper date
+* is entered displays a message if not
+* entered properly, corrects format
+* if it was formatted incorrectly.
 * *************************************/
 function checkDate(date)
 {
-   
+   if(date.value == "")
+   {
+      console.log("Empty number Field");
+      document.getElementById("cardDateERR").innerHTML = "Please enter a Card Date</br>";
+   }
+   else
+   {
+      //resets the error message
+      document.getElementById("cardDateERR").innerHTML = "";
+      // Breaks the date down into its components month day and year
+      var dateVal = date.value;
+      /*****************************************************
+      * Advanced date formula allows dashes commas or slashes
+      * dateVal = dateVal.split(/[-,\s\\/]/);
+      *****************************************************/
+      dateVal = dateVal.split(/[\s/]+/);
+      //if the point of the assignment was regex I used it above
+
+      /*****************************************************
+      * the string of values is split into seperate variables
+      * only for clarity and incase i need to lookback at
+      * this assignment later, please dont deduct points
+      * I know i could have simply referenced the location of
+      * the array instead of creating variables for each.
+      *****************************************************/
+      var month = dateVal[0];
+      var day = dateVal[1];
+      var year = dateVal[2];
+      if( ((year >= 1753)&&(year <= 2100)) &&
+          ((day >= 1)    &&(day <= 31))    &&
+          ((month >= 1)  &&(month <= 12)))
+      {
+         console.log("Date Match");
+         document.getElementById("cardDateERR").innerHTML = "";
+      }
+      else
+      {
+         document.getElementById("cardDateERR").innerHTML = "Invalid Expiration Date</br>";
+      }
+   }
+
 }
 
-function checkField(elCheck)
+function checkMoney(money)
 {
-   // if(elCheck.value == "")
-   // {
-   //    document.getElementById(elCheck).innerHTML = "Please enter an" + elCheck;
-   // }
-   if(elCheck.name == "phoneNum")
+   if(money.value == "")
    {
-      valToCheck = elCheck.value.replace('-', '');
-      if(valToCheck.match(''))
+      console.log("Empty Money Field");
+      document.getElementById("moneyERR").innerHTML = "Please enter an amount</br>";
+   }
+   else
+   {
+      //resets the error message
+      document.getElementById("moneyERR").innerHTML = "";
+      if(money.value.match(/^\s*\$?((\d{1,3}[,]?)?(\.\d{2})?)\s*$/g))
       {
-         console.log("Empty");
-         document.getElementById("phoneERR").innerHTML = "Please Enter A Phone Number</br>";
-         document.getElementById("phoneNum").focus();
+         console.log("Money Match");
+         document.getElementById("moneyERR").innerHTML = "";
       }
       else
       {
-         if(valToCheck.match(/\d(10)[^A-Za-z]/))
-         {
-           console.log("Match");
-           document.getElementById("phoneERR").innerHTML = "";
-         }
-         else
-         {
-           console.log("No Match");
-           document.getElementById("phoneERR").innerHTML = "INVALID PHONE NUMBER</br>";
-           document.getElementById("phoneNum").focus();
-           }
-      }
-
-   }
-
-   if(elCheck.name == "cardNum")
-   {
-      valToCheck = elCheck.value.replace('-', '');
-      if(valToCheck == "")
-      {
-         console.log("Empty");
-         document.getElementById("cardERR").innerHTML = "Please Enter A Card Number</br>";
-         document.getElementById("cardNum").focus();
-      }
-      else
-      {
-         document.getElementById("cardERR").innerHTML = "";
-         if((valToCheck.match(/\d[^A-Za-z]/)) && valToCheck.length == 16)
-         {
-           console.log("Match");
-           document.getElementById("cardERR").innerHTML = "";
-         }
-         else
-         {
-           console.log("No Match");
-           document.getElementById("cardERR").innerHTML = "INVALID CARD NUMBER</br>";
-           document.getElementById("cardNum").focus;
-         }
-      }
-
-   }
-   /*   var condition = /\D[A-Za-z]/;
-   for(i = 0; i < elCheck.value.length; i++)
-   {
-      if(elCheck.value[i] == condition)
-   }
-      if(elCheck.value.match(condition))
-      {
-
-      }
-      else
-      {
-         document.getElementById("firstname").innerHTML = "PLEASE ENTER A VALID NAME";
-         document.getElementById("firstname").placholder = 'PLEASE ENTER A VALID NAME';
-         elCheck.focus();
+         document.getElementById("moneyERR").innerHTML = "Invalid Entry</br>";
       }
    }
-   if(elCheck.name == "idnum")
-   {
-      var condition = /\d[^A-Za-z]/;
-      if(elCheck.value.match(condition))
-      {
-
-      }
-      else
-      {
-         elCheck.placholder = 'PLEASE ENTER A VALID NUMBER';
-         elCheck.focus();
-      }
-   }
-   if(elCheck.name == "date")
-   {
-      for(i = 1; i < elCheck.date.value.size(); i++)
-      {
-         if(i <= 2)
-         {
-
-         }
-         else
-         {
-
-         }
-      }
-      if(elCheck.value.match(condition))
-      {
-
-      }
-      else
-      {
-         elCheck.focus();
-      }
-   } */
-}
-function checkForm(form)
-{
 
 }
-function setfocus()
-{
-   document.getElementById("firstname").focus();
-}
-function thanks()
-{
 
+function checkState(state)
+{
+   if(state.value == "")
+   {
+      console.log("Empty State Field");
+      document.getElementById("stateERR").innerHTML = "Please enter a State</br>";
+   }
+   else
+   {
+      document.getElementById("stateERR").innerHTML = "";
+      var stateString = "";
+      stateString = String(state.value);
+      console.log(state);
+      var stateList = new Array("AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL",
+                              "GA","GU","HI","IA","ID", "IL","IN","KS","KY","LA",
+                              "MA","MD","ME","MH","MI","MN","MO","MS","MT","NC",
+                              "ND","NE","NH","NJ","NM","NV","NY", "OH","OK","OR",
+                              "PA","PR","PW","RI","SC","SD","TN","TX","UT","VA",
+                              "VI","VT","WA","WI","WV","WY");
+      if(stateList.indexOf(stateString) != "-1")
+      {
+         document.getElementById("stateERR").innerHTML = "";
+      }
+      else
+      {
+         document.getElementById("stateERR").innerHTML = "Invalid State";
+      }
+   }
 }

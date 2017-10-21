@@ -41,43 +41,43 @@
 		                  <h2>Your Info: <br/></h2>
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
-		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this);" onblur="checkName(this); setUserFirst(this.value);">
+		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this);" onfocus="checkName(this); setUserFirst(this.value);">
 		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this); setUserLast(this.value);">
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this);" onblur="checkAge(this);"/>
+								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this);" onfocus="checkAge(this);"/>
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
-		                  <input placeholder="000-00-0000" name="social" id="social" onkeyup="checkSocial(this)" onblur="checkSocial(this);"></input>
+		                  <input placeholder="000-00-0000" name="social" id="social" onkeyup="checkSocial(this)" onfocus="checkSocial(this);"></input>
 		               <br/>
 		               <a>Cell Phone: <br/></a>
 		               <span id="phoneERR" style="font-size: 75%; color:red;"></span>
-		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onkeyup="checkPhone;"onblur="checkPhone(this);" />
+		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onkeyup="checkPhone(this);" onfocus="checkPhone(this);"/>
 		               <br/>
 		               <a>Credit Card Number: <br/></a>
 		               <span id="cardNumERR" style="font-size: 75%; color: red;"></span>
-		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onkeyup="checkCredit(this);" onblur="checkCredit(this);" />
+		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onkeyup="checkCredit(this);" onfocus="checkCredit(this);" />
 		               <br/>
 		               <span id="cardDateERR" style="font-size: 75%; color: red;"></span>
 		               <a>Credit Card Expiration Date: <br/></a>
-		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onblur="checkField(this);" />
+		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onkeyup="checkDate(this)" onfocus="checkDate(this);" />
 		               <br/>
 							<span id="stateERR" style="font-size: 75%; color: red;"></span>
 		               <a>State:<br/></a>
 							<span id="stateERR" style="font-size: 75%; color: red;"></span>
-							<input placeholder="ID" maxlength="2" type="text" id="state" name="state" />
+							<input placeholder="ID" maxlength="2" type="text" id="state" name="state" onkeyup="checkState(this);" />
 
 		               </form>
 		               </div>
 		               <div class="box two">
 		               <h2>Choose your services: <br/></h2>
 
-		               <form onreset="thanks()" onsubmit="checkForm(this)">
+		               <form onreset="thanks()">
 							<a>How Much can you spend? <br/></a>
 							<span id="moneyERR" style="font-size: 75%; color: red;"></span>
-							<input placeholder="$12,431.94" type="text" id="money" name="money" />
+							<input placeholder="$12,431.94" type="text" id="money" name="money" onkeyup="checkMoney(this);" onfocus="checkMoney(this);"/>
 							<br/>
 		               <a>Premium Tax Service: <br/></a>
 		               <div class="container">
@@ -87,7 +87,7 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premiumtaxamt" value = "" id="premiumtaxamt" onblur="checkField(this);">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premiumtaxamt" value = "" id="premiumtaxamt">
 		                  </div>
 		               </div>
 		               <a>Basic Tax Service: <br/></a>
@@ -98,7 +98,7 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="lastname" value = "" id="basictaxamt" onblur="checkField(this); setUserLast(this.value);">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="lastname" value = "" id="basictaxamt">
 		                  </div>
 		               </div>
 		               <a>Premium Accounting Service: <br/></a>
@@ -109,7 +109,7 @@
 		                  </div>
 		                  <div class="box">
 		                     <a￼ class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt" onblur="checkField(this);">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt">
 		                  </div>
 		               </div>
 		               <a>Basic Accounting Service: <br/></a>
@@ -120,7 +120,7 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt" onblur="checkField(this);">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt">
 		                  </div>
 		               </div>
 		               <a style="text-align:center;">==========================</a><br/>
@@ -132,16 +132,7 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input
-									disabled="true"
-									placeholder=""
-									style = "align:right;"
-									type="text"
-									name="totalhour"
-									value = ""
-									id="totalhour"
-									onblur="checkField(this);
-									setUserLast(this.value);">
+		                     <input disabled="true"placeholder=""style = "align:right;"type="text"name="totalhour"value = ""id="totalhour">
 		                  </div>
 		               </div>
 		            <br/>
