@@ -18,7 +18,7 @@ function checkName(name)
 {
    if(name.value.match(/\w\D/))
    {
-      console.log("Match");
+      console.log("Name Match");
       document.getElementById("nameERR").innerHTML = "";
    }
    else
@@ -30,9 +30,9 @@ function checkName(name)
 
 function checkAge(age)
 {
-   if(name.value.match(/\d[^A-Z^a-z]{1,2}/))
+   if(name.value.match(/\d{1,2}[^A-Z^a-z]/))
    {
-      console.log("Match");
+      console.log("Age Match");
       document.getElementById("ageERR").innerHTML = "";
    }
    else
