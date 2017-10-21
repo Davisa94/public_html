@@ -27,6 +27,7 @@ function checkName(name)
       document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
    }
 }
+
 function checkAge(age)
 {
    if(name.value.match(/\d[^A-Z^a-z]{1,2}/))
