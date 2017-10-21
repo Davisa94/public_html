@@ -41,12 +41,12 @@
 		                  <h2>Your Info: <br/></h2>
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
-		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onblur="checkName(this); setUserFirst(this.value);">
+		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this);" onblur="checkName(this); setUserFirst(this.value);">
 		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this); setUserLast(this.value);">
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this)" onblur="checkAge(this)"/>
+								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this);" onblur="checkAge(this);"/>
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
@@ -54,11 +54,11 @@
 		               <br/>
 		               <a>Cell Phone: <br/></a>
 		               <span id="phoneERR" style="font-size: 75%; color:red;"></span>
-		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onblur="checkField(this);" />
+		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onkeyup="checkPhone;"onblur="checkPhone(this);" />
 		               <br/>
 		               <a>Credit Card Number: <br/></a>
 		               <span id="cardNumERR" style="font-size: 75%; color: red;"></span>
-		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onblur="checkField(this);" />
+		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onkeyup="checkCredit(this);" onblur="checkCredit(this);" />
 		               <br/>
 		               <span id="cardDateERR" style="font-size: 75%; color: red;"></span>
 		               <a>Credit Card Expiration Date: <br/></a>

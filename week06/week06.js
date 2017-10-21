@@ -82,12 +82,33 @@ function checkSocial(social)
       document.getElementById("socialERR").innerHTML = "";
       socialVal = social.value;
       socialVal = socialVal.replace(/-/g, '');
-      socialVal = socialVal.replace(" ", '');
+      socialVal = socialVal.replace(/ /g, '');
       console.log(socialVal);
       if(socialVal.match(/\b\d{9}\b/g))
       {
             console.log("Social Match");
             document.getElementById("socialERR").innerHTML = "";
+            /*****************************************
+            * Special formatting of social, converts
+            * the stripped social into a correct format
+            * then puts it out to the input
+            *****************************************/
+            formattedSocial = "";
+            for (var i = 0; i < 3; i++)
+            {
+               formattedSocial += socialVal.charAt(i);
+            }
+            formattedSocial += " - ";
+            for (var i = 3; i < 5; i++)
+            {
+               formattedSocial += socialVal.charAt(i);
+            }
+            formattedSocial += " - ";
+            for (var i = 5; i < 9; i++)
+            {
+               formattedSocial += socialVal.charAt(i);
+            }
+            document.getElementById("social").value = formattedSocial;
       }
       else
       {
@@ -99,15 +120,15 @@ function checkSocial(social)
 
 
 /**************************************
-* Validates that a proper Social
-* security number is entered
+* Validates that a proper Credit
+* card number is entered
 * *************************************/
 function checkCredit(credit)
 {
    if(credit.value == "")
    {
       console.log("Empty Credit Field");
-      document.getElementById("cardNumERR").innerHTML = "Please enter a Card Number";
+      document.getElementById("cardNumERR").innerHTML = "Please enter a Card Number</br>";
    }
    else
    {
@@ -119,6 +140,66 @@ function checkCredit(credit)
       {
          console.log("Card Match");
          document.getElementById("cardNumERR").innerHTML = "";
+      }
+      else
+      {
+         document.getElementById("cardNumERR").innerHTML = "Invalid Card Number</br>";
+      }
+   }
+}
+/**************************************
+* Validates that a proper Phone number
+* is entered displays message if not
+* *************************************/
+function checkPhone(number)
+{
+   if(number.value == "")
+   {
+      console.log("Empty number Field");
+      document.getElementById("phoneERR").innerHTML = "Please enter a Card Number</br>";
+   }
+   else
+   {
+      document.getElementById("phoneERR").innerHTML = "";
+      numberVal = number.value;
+      numberVal = numberVal.replace(/-/g, '');
+      numberVal = numberVal.replace(/ /g, '');
+      numberVal = numberVal.replace(/\(/g, '');
+      numberVal = numberVal.replace(/\)/g, '');
+      if(numberVal.match(/\b\d{10}\b/g))
+      {
+         console.log("Card Match");
+         document.getElementById("phoneERR").innerHTML = "";
+         //format phone number nicely
+         //insets the "( "
+         formattedNum = "(";
+         //inserts the area code
+         for (var i = 0; i < 3; i++)
+         {
+            formattedNum += numberVal.charAt(i);
+         }
+         //Closes the area code
+         formattedNum += ") ";
+         //inserts the next three digits
+         for (var i = 3; i < 6; i++)
+         {
+            formattedNum += numberVal.charAt(i);
+         }
+         //inserts a dash
+         formattedNum += " - ";
+
+         //finishes the last four digits
+         for (var i = 6; i < 10; i++)
+         {
+            formattedNum += numberVal.charAt(i);
+         }
+         //inserts final result into the field
+         document.getElementById("phone").value = formattedNum;
+         console.log(formattedNum);
+      }
+      else
+      {
+         document.getElementById("phoneERR").innerHTML = "Invalid Card Number</br>";
       }
    }
 }
