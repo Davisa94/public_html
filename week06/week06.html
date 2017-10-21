@@ -50,16 +50,17 @@
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
-		                  <input placeholder="000-00-0000" name = "ssn" id = "ssn" onblur="checkField(this);"></input>
+		                  <input placeholder="000-00-0000" name="social" id="social" onkeyup="checkSocial(this)" onblur="checkSocial(this);"></input>
 		               <br/>
 		               <a>Cell Phone: <br/></a>
 		               <span id="phoneERR" style="font-size: 75%; color:red;"></span>
 		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onblur="checkField(this);" />
 		               <br/>
 		               <a>Credit Card Number: <br/></a>
-		               <span id="cardERR" style="font-size: 75%; color: red;"></span>
+		               <span id="cardNumERR" style="font-size: 75%; color: red;"></span>
 		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onblur="checkField(this);" />
 		               <br/>
+		               <span id="cardDateERR" style="font-size: 75%; color: red;"></span>
 		               <a>Credit Card Expiration Date: <br/></a>
 		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onblur="checkField(this);" />
 		               <br/>

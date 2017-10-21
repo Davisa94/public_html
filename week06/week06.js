@@ -67,20 +67,59 @@ function checkAge(age)
 
 /**************************************
 * Validates that a proper Social
-* security is entered
+* security number is entered
 * *************************************/
-function socialCheck(social)
+function checkSocial(social)
 {
-   social = social.value.replace('-', '');
-   if(social.value.match(/\d{9}/) && age.value <= 118)
+   if(social.value == "")
    {
-         console.log("Age Match");
-         document.getElementById("socialERR").innerHTML = "";
+      console.log("Empty");
+      document.getElementById("socialERR").innerHTML = "Please Enter your social security number</br>";
+      document.getElementById("social").focus();
    }
    else
    {
-      console.log("No Match");
-      document.getElementById("socialERR").innerHTML = "INVALID AGE</br>";
+      document.getElementById("socialERR").innerHTML = "";
+      socialVal = social.value;
+      socialVal = socialVal.replace(/-/g, '');
+      socialVal = socialVal.replace(" ", '');
+      console.log(socialVal);
+      if(socialVal.match(/\b\d{9}\b/g))
+      {
+            console.log("Social Match");
+            document.getElementById("socialERR").innerHTML = "";
+      }
+      else
+      {
+         console.log("No Match");
+         document.getElementById("socialERR").innerHTML = "Invalid Social</br>";
+      }
+   }
+}
+
+
+/**************************************
+* Validates that a proper Social
+* security number is entered
+* *************************************/
+function checkCredit(credit)
+{
+   if(credit.value == "")
+   {
+      console.log("Empty Credit Field");
+      document.getElementById("cardNumERR").innerHTML = "Please enter a Card Number";
+   }
+   else
+   {
+      document.getElementById("cardNumERR").innerHTML = "";
+      creditVal = credit.value;
+      creditVal = creditVal.replace(/-/g, '');
+      creditVal = creditVal.replace(/ /g, '');
+      if(creditVal.match(/\b\d{16}\b/g))
+      {
+         console.log("Card Match");
+         document.getElementById("cardNumERR").innerHTML = "";
+      }
    }
 }
 function checkField(elCheck)
