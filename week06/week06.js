@@ -11,29 +11,25 @@ function resetForm()
 {
    document.getElementById("form1").reset();
 }
-function total()
+/**************************************
+* Validates that a proper name is input
+* *************************************/
+function checkName(name)
 {
-   // var premiumtaxrate = document.getElementById(premiumtaxrate).value;
-   // var premiumtaxamt = document.getElementById(premiumtaxamt).value;
-   // var basictaxrate = document.getElementById(basictaxrate).value;
-   // var basictaxamt = document.getElementById(); premacctrate; premacctamt; basicacctrate; basicacctamt;
-   // document.getElementById(premiumtaxrate).value
+   if(name.value.match(/\w\D/))
+   {
+      console.log("Match");
+      document.getElementById("nameERR").innerHTML = "";
+   }
+   else
+   {
+      console.log("No Match");
+      document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
+   }
 }
+
 function checkField(elCheck)
 {
-   if(elCheck.name == "name")
-   {
-      if(elCheck.value.match(/\D[A-Za-z]/))
-      {
-         console.log("Match");
-         document.getElementById("nameERR").innerHTML = "";
-      }
-      else
-      {
-         console.log("No Match");
-         document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
-         }
-   }
    if(elCheck.name == "phoneNum")
    {
       valToCheck = elCheck.value.replace('-', '');
