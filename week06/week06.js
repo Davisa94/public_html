@@ -140,6 +140,32 @@ function checkCredit(credit)
       {
          console.log("Card Match");
          document.getElementById("cardNumERR").innerHTML = "";
+         /*****************************************
+         * Special formatting of Credit, converts
+         * the stripped card number into a correct format
+         * then puts it out to the input
+         *****************************************/
+         formattedCredit = "";
+         for (var i = 0; i < 4; i++)
+         {
+            formattedCredit += creditVal.charAt(i);
+         }
+         formattedCredit += " - ";
+         for (var i = 4; i < 8; i++)
+         {
+            formattedCredit += creditVal.charAt(i);
+         }
+         formattedCredit += " - ";
+         for (var i = 8; i < 12; i++)
+         {
+            formattedCredit += creditVal.charAt(i);
+         }
+         formattedCredit += " - ";
+         for (var i = 12; i < 16; i++)
+         {
+            formattedCredit += creditVal.charAt(i);
+         }
+         document.getElementById("cardNum").value = formattedCredit;
       }
       else
       {
@@ -203,6 +229,15 @@ function checkPhone(number)
       }
    }
 }
+/**************************************
+* Validates that a proper Phone number
+* is entered displays message if not
+* *************************************/
+function checkDate(date)
+{
+   
+}
+
 function checkField(elCheck)
 {
    // if(elCheck.value == "")
