@@ -46,8 +46,9 @@
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this)"/>
+								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this)" onblur="checkAge(this)"/>
 		               <br/>
+								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
 		                  <input placeholder="000-00-0000" name = "ssn" id = "ssn" onblur="checkField(this);"></input>
 		               <br/>

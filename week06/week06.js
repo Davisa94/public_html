@@ -16,15 +16,24 @@ function resetForm()
 * *************************************/
 function checkName(name)
 {
-   if(name.value.match(/\w\D/))
+   if(age.value == "")
    {
-      console.log("Name Match");
-      document.getElementById("nameERR").innerHTML = "";
+      console.log("Empty");
+      document.getElementById("nameERR").innerHTML = "Please Enter a name</br>";
+      document.getElementById("name").focus();
    }
    else
    {
-      console.log("No Match");
-      document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
+      if(name.value.match(/\w\D/))
+      {
+         console.log("Name Match");
+         document.getElementById("nameERR").innerHTML = "";
+      }
+      else
+      {
+         console.log("No Match");
+         document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
+      }
    }
 }
 
@@ -34,16 +43,26 @@ function checkName(name)
 * *************************************/
 function checkAge(age)
 {
-   if(age.value.match(/\d{0,2}[^A-Za-z]/) && age.value <= 118)
+   if(age.value == "")
    {
-         console.log("Age Match");
-         document.getElementById("ageERR").innerHTML = "";
+      console.log("Empty");
+      document.getElementById("ageERR").innerHTML = "Please Enter an Age</br>";
+      document.getElementById("age").focus();
    }
    else
    {
-      console.log("No Match");
-      document.getElementById("ageERR").innerHTML = "INVALID AGE</br>";
+      if(age.value.match(/\d{0,2}/) && age.value <= 118)
+      {
+            console.log("Age Match");
+            document.getElementById("ageERR").innerHTML = "";
+      }
+      else
+      {
+         console.log("No Match");
+         document.getElementById("ageERR").innerHTML = "INVALID AGE</br>";
+      }
    }
+
 }
 
 /**************************************
@@ -52,7 +71,8 @@ function checkAge(age)
 * *************************************/
 function socialCheck(social)
 {
-   if(social.value.match(/\d{0,2}[^A-Za-z]/) && age.value <= 118)
+   social = social.value.replace('-', '');
+   if(social.value.match(/\d{9}/) && age.value <= 118)
    {
          console.log("Age Match");
          document.getElementById("socialERR").innerHTML = "";
