@@ -7,32 +7,32 @@ function setUserLast(value)
 {
    userName += " " + value;
 }
-function resetForm()
-{
-   document.getElementById("form1").reset();
-}
+// function resetForm()
+// {
+//    document.getElementById("form1").reset();
+// }
 /**************************************
 * Validates that a proper name is input
 * *************************************/
-function checkName(name)
+function checkName(name, errorElement)
 {
-   if(age.value == "")
+   if(name.value == "")
    {
       console.log("Empty");
-      document.getElementById("nameERR").innerHTML = "Please Enter a name</br>";
-      document.getElementById("name").focus();
+      document.getElementById(errorElement).innerHTML = "Please Enter a name</br>";
+      document.getElementById(name.id).focus();
    }
    else
    {
-      if(name.value.match(/\w\D/))
+      if(name.value.match(/^\s*\w\D\s*$/))
       {
          console.log("Name Match");
-         document.getElementById("nameERR").innerHTML = "";
+         document.getElementById(errorElement).innerHTML = "";
       }
       else
       {
          console.log("No Match");
-         document.getElementById("nameERR").innerHTML = "INVALID NAME</br>";
+         document.getElementById(errorElement).innerHTML = "INVALID NAME</br>";
       }
    }
 }
@@ -41,25 +41,25 @@ function checkName(name)
 * Validates that a proper age is input
 * between the ages  of 0 and 118
 * *************************************/
-function checkAge(age)
+function checkAge(age, errorElement)
 {
    if(age.value == "")
    {
       console.log("Empty");
-      document.getElementById("ageERR").innerHTML = "Please Enter an Age</br>";
-      document.getElementById("age").focus();
+      document.getElementById(errorElement).innerHTML = "Please Enter an Age</br>";
+      document.getElementById(age.id).focus();
    }
    else
    {
       if(age.value.match(/\d{0,2}/) && age.value <= 118)
       {
             console.log("Age Match");
-            document.getElementById("ageERR").innerHTML = "";
+            document.getElementById(errorElement).innerHTML = "";
       }
       else
       {
          console.log("No Match");
-         document.getElementById("ageERR").innerHTML = "INVALID AGE</br>";
+         document.getElementById(errorElement).innerHTML = "INVALID AGE</br>";
       }
    }
 

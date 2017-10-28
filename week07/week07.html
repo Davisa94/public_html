@@ -41,12 +41,12 @@
 		                  <h2>Your Info: <br/></h2>
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
-		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this);" onfocus="checkName(this); setUserFirst(this.value);">
-		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this); setUserLast(this.value);">
+		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this, 'nameERR');" onfocus="checkName(this, 'nameERR'); setUserFirst(this.value);">
+		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this, 'nameERR'); setUserLast(this.value);">
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" maxlength="3" id="age" name="age" onkeyup="checkAge(this);" onfocus="checkAge(this);"/>
+								<input placeholder="Age" type="text" id="age" name="age" onkeyup="checkAge(this);" onfocus="checkAge(this);"/>
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
