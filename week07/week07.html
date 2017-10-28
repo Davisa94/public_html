@@ -42,32 +42,32 @@
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
 		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this, 'nameERR');" onfocus="checkName(this, 'nameERR'); setUserFirst(this.value);">
-		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this, 'nameERR'); setUserLast(this.value);">
+		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this, 'nameERR'); setUserLast(this.value);" onfocus="checkName(this, 'nameERR');">
 								<br/>
 		                  <a>Age:<br/> </a>
 								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" id="age" name="age" onkeyup="checkAge(this);" onfocus="checkAge(this);"/>
+								<input placeholder="Age" type="text" id="age" name="age" onkeyup="checkAge(this, 'ageERR');" onfocus="checkAge(this, 'ageERR');"/>
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
-		                  <input placeholder="000-00-0000" name="social" id="social" onkeyup="checkSocial(this)" onfocus="checkSocial(this);"></input>
+		                  <input placeholder="000-00-0000" name="social" id="social" onkeyup="checkSocial(this, 'socialERR')" onfocus="checkSocial(this, 'socialERR');"></input>
 		               <br/>
 		               <a>Cell Phone: <br/></a>
 		               <span id="phoneERR" style="font-size: 75%; color:red;"></span>
-		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onkeyup="checkPhone(this);" onfocus="checkPhone(this);"/>
+		                  <input placeholder="000-000-0000" name="phoneNum" id="phone" type="text" onkeyup="checkPhone(this, 'phoneERR');" onfocus="checkPhone(this, 'phoneERR');"/>
 		               <br/>
 		               <a>Credit Card Number: <br/></a>
 		               <span id="cardNumERR" style="font-size: 75%; color: red;"></span>
-		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onkeyup="checkCredit(this);" onfocus="checkCredit(this);" />
+		                  <input placeholder="0000-0000-0000-0000" name="cardNum" id="cardNum" type="text" onkeyup="checkCredit(this, 'cardNumERR');" onfocus="checkCredit(this, 'cardNumERR');" />
 		               <br/>
 		               <span id="cardDateERR" style="font-size: 75%; color: red;"></span>
 		               <a>Credit Card Expiration Date: <br/></a>
-		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onkeyup="checkDate(this)" onfocus="checkDate(this);" />
+		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onkeyup="checkDate(this, 'cardDateERR')" onfocus="checkDate(this, 'cardDateERR');" />
 		               <br/>
 							<span id="stateERR" style="font-size: 75%; color: red;"></span>
 		               <a>State:<br/></a>
 							<span id="stateERR" style="font-size: 75%; color: red;"></span>
-							<input placeholder="ID" maxlength="2" type="text" id="state" name="state" onkeyup="checkState(this);" />
+							<input placeholder="ID" maxlength="2" type="text" id="state" name="state" onkeyup="checkState(this, 'stateERR');" />
 
 		               </form>
 		               </div>

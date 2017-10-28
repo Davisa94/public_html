@@ -51,15 +51,20 @@ function checkAge(age, errorElement)
    }
    else
    {
-      if(age.value.match(/\d{0,2}/) && age.value <= 118)
+      ageVal = age.value;
+      if(age.value.match(/^\s*\d{1,3}\s*$/g))
       {
-            console.log("Age Match");
-            document.getElementById(errorElement).innerHTML = "";
-      }
-      else
-      {
-         console.log("No Match");
-         document.getElementById(errorElement).innerHTML = "INVALID AGE</br>";
+         ageVal = ageVal.replace(/ /g, '');
+         if(age.value <= 118)
+         {
+               console.log("Age Match");
+               document.getElementById(errorElement).innerHTML = "";
+         }
+         else
+         {
+            console.log("No Match");
+            document.getElementById(errorElement).innerHTML = "INVALID AGE</br>";
+         }
       }
    }
 
@@ -69,30 +74,30 @@ function checkAge(age, errorElement)
 * Validates that a proper Social
 * security number is entered
 * *************************************/
-function checkSocial(social)
+function checkSocial(social, errorElement)
 {
    if(social.value == "")
    {
       console.log("Empty");
-      document.getElementById("socialERR").innerHTML = "Please Enter your social security number</br>";
-      document.getElementById("social").focus();
+      document.getElementById(errorElement).innerHTML = "Please Enter your social security number</br>";
+      document.getElementById(social.id).focus();
    }
    else
    {
-      document.getElementById("socialERR").innerHTML = "";
+      document.getElementById(errorElement).innerHTML = "";
       socialVal = social.value;
-      socialVal = socialVal.replace(/-/g, '');
-      socialVal = socialVal.replace(/ /g, '');
       console.log(socialVal);
-      if(socialVal.match(/\b\d{9}\b/g))
+      if(socialVal.match(/^\s*\d{3}\s*\-*\s*\d{2}\s*\-*\s*\d{4}\s*$/g))
       {
             console.log("Social Match");
-            document.getElementById("socialERR").innerHTML = "";
+            document.getElementById(errorElement).innerHTML = "";
             /*****************************************
             * Special formatting of social, converts
             * the stripped social into a correct format
             * then puts it out to the input
             *****************************************/
+            socialVal = socialVal.replace(/-/g, '');
+            socialVal = socialVal.replace(/ /g, '');
             formattedSocial = "";
             for (var i = 0; i < 3; i++)
             {
@@ -108,12 +113,12 @@ function checkSocial(social)
             {
                formattedSocial += socialVal.charAt(i);
             }
-            document.getElementById("social").value = formattedSocial;
+            document.getElementById(social.id).value = formattedSocial;
       }
       else
       {
          console.log("No Match");
-         document.getElementById("socialERR").innerHTML = "Invalid Social</br>";
+         document.getElementById(errorElement).innerHTML = "Invalid Social</br>";
       }
    }
 }
@@ -123,28 +128,29 @@ function checkSocial(social)
 * Validates that a proper Credit
 * card number is entered
 * *************************************/
-function checkCredit(credit)
+function checkCredit(credit, errorElement)
 {
+   creditVal = credit.value;
    if(credit.value == "")
    {
       console.log("Empty Credit Field");
-      document.getElementById("cardNumERR").innerHTML = "Please enter a Card Number</br>";
+      document.getElementById(errorElement).innerHTML = "Please enter a Card Number</br>";
    }
    else
    {
-      document.getElementById("cardNumERR").innerHTML = "";
-      creditVal = credit.value;
-      creditVal = creditVal.replace(/-/g, '');
-      creditVal = creditVal.replace(/ /g, '');
-      if(creditVal.match(/\b\d{16}\b/g))
+      document.getElementById(credit.id).innerHTML = "";
+
+      if(creditVal.match(/^\s*\d{4}\s*\-*\s*\d{4}\s*\-*\s*\d{4}\s*\-*\s*\d{4}\s*$/g))
       {
          console.log("Card Match");
-         document.getElementById("cardNumERR").innerHTML = "";
+         document.getElementById(errorElement).innerHTML = "";
          /*****************************************
          * Special formatting of Credit, converts
          * the stripped card number into a correct format
          * then puts it out to the input
          *****************************************/
+         creditVal = creditVal.replace(/-/g, '');
+         creditVal = creditVal.replace(/ /g, '');
          formattedCredit = "";
          for (var i = 0; i < 4; i++)
          {
@@ -177,8 +183,9 @@ function checkCredit(credit)
 * Validates that a proper Phone number
 * is entered displays message if not
 * *************************************/
-function checkPhone(number)
+function checkPhone(number, errorElement)
 {
+   numberVal = number.value;
    if(number.value == "")
    {
       console.log("Empty number Field");
@@ -187,20 +194,19 @@ function checkPhone(number)
    else
    {
       document.getElementById("phoneERR").innerHTML = "";
-      numberVal = number.value;
-      numberVal = numberVal.replace(/-/g, '');
-      numberVal = numberVal.replace(/ /g, '');
-      numberVal = numberVal.replace(/\(/g, '');
-      numberVal = numberVal.replace(/\)/g, '');
-      if(numberVal.match(/^\d{10}/g))
+      if(numberVal.match(/^\s*\(*\d{3}\)*\s*\-*\s*\d{3}\s*\-*\s*\d{4}\s*$/g))
       {
-         console.log("Card Match");
+         console.log("Phone Match");
          document.getElementById("phoneERR").innerHTML = "";
          /*****************************************
          * Special formatting of Phone number,
          * converts the stripped number into a correct
          * format then puts it out to the input
          *****************************************/
+         numberVal = numberVal.replace(/-/g, '');
+         numberVal = numberVal.replace(/ /g, '');
+         numberVal = numberVal.replace(/\(/g, '');
+         numberVal = numberVal.replace(/\)/g, '');
          //format phone number nicely
          //insets the "( "
          formattedNum = "(";
@@ -240,7 +246,7 @@ function checkPhone(number)
 * entered properly, corrects format
 * if it was formatted incorrectly.
 * *************************************/
-function checkDate(date)
+function checkDate(date, errorElement)
 {
    if(date.value == "")
    {
