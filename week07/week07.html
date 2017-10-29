@@ -26,8 +26,8 @@
 		         <div id="options">
 		            <ul>
 		               <a href="#footer" class="button">Contact Us</a>
-		               <a href ="week03_services.html" class="button"> Our Services</a>
-		               <a href ="week03.html" class="button"> Homepage</a>
+		               <a href ="../week03/week03_services.html" class="button"> Our Services</a>
+		               <a href ="../week03/week03.html" class="button"> Homepage</a>
 		            </ul>
 		         </div>
 		         <div id="main">
@@ -36,17 +36,17 @@
 		            </h1>
 		            <a style = "font-size: 160%;">Pick Your Services:</a><br/>
 		            <div class="container" id = "form">
-		               <form onreset="thanks()" onsubmit="checkForm(this)">
+		               <form id ="form1">
 		                  <div class="box one">
 		                  <h2>Your Info: <br/></h2>
 		                  <a>Name: <br/></a>
 		                  <span id="nameERR" style="font-size: 75%; color: red;"></span>
-		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this, 'nameERR');" onfocus="checkName(this, 'nameERR'); setUserFirst(this.value);">
-		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this, 'nameERR'); setUserLast(this.value);" onfocus="checkName(this, 'nameERR');">
+		                  <input onload="this.focus();" placeholder="First Name" style = "align:right;" type="text" name="name" value = "" id="firstname" onkeyup="checkName(this, 'nameERR'); setUserFirst(this);" onfocus="checkName(this, 'nameERR'); setUserFirst(this);">
+		                  <input placeholder="Last Name" style = "align:right;" type="text" name="name" value = "" id="lastname" onkeyup="checkName(this, 'nameERR');" onfocus="checkName(this, 'nameERR');">
 								<br/>
-		                  <a>Age:<br/> </a>
-								<span id="ageERR" style="font-size: 75%; color: red;"></span>
-								<input placeholder="Age" type="text" id="age" name="age" onkeyup="checkAge(this, 'ageERR');" onfocus="checkAge(this, 'ageERR');"/>
+								<a>Address: <br/></a>
+								<span id="addressERR" style="font-size: 75%; color: red;"></span>
+		                  <textarea placeholder="Address" rows = "4" cols = "41" name = "address" id = "address" onkeyup="checkAddress(this, 'addressERR');" onfocus="checkAddress(this, 'addressERR');"></textarea>
 		               <br/>
 								<span id="socialERR" style="font-size: 75%; color: red;"></span>
 		                  <a>Social Security Number: <br/></a>
@@ -64,17 +64,21 @@
 		               <a>Credit Card Expiration Date: <br/></a>
 		                  <input placeholder="M/D/YYYY" name="date" id="date" type="text" onkeyup="checkDate(this, 'cardDateERR')" onfocus="checkDate(this, 'cardDateERR');" />
 		               <br/>
-							<span id="stateERR" style="font-size: 75%; color: red;"></span>
-		               <a>State:<br/></a>
-							<span id="stateERR" style="font-size: 75%; color: red;"></span>
-							<input placeholder="ID" maxlength="2" type="text" id="state" name="state" onkeyup="checkState(this, 'stateERR');" />
-
+							<a>Card Type: <br/></a>
+							<select name="Card Type" size="2">
+							  <option value="visa">Visa</option>
+							  <option value="mastercard">Master Card</option>
+							  <option value="americanexpress">American Express</option>
+							</select>
+							<br/>
+							<input type="reset" id="form1Reset" text="Reset"/>
+							<input type="submit" id="form1Submit" text="Submit" onmousedown="thanks()"/>
 		               </form>
 		               </div>
 		               <div class="box two">
 		               <h2>Choose your services: <br/></h2>
 
-		               <form onreset="thanks()">
+		               <form id = "form2" onreset="">
 		               <a>Premium Tax Service: <br/></a>
 		               <div class="container">
 		                  <div class="box">
@@ -83,7 +87,11 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premiumtaxamt" value = "" id="premiumtaxamt">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premiumtaxamt" value = "" id="premiumtaxamt" onblur="getFinalTotal('totalWtax');" onkeyup="checkTime(this); totalHours(this); totalRate('premiumtaxrate' ); subTotal(this.id, 'premiumtaxrate', 'premiumtaxtotal'); getFinalTotal('totalWtax')">
+		                  </div>
+								<div class="box">
+		                     <a class = "minibox">Cost Before Tax<br/></a>
+		                     <input disabled="true" placeholder="$0" style = "align:right;" type="text" name="premiumtaxtotal" value = "" id="premiumtaxtotal">
 		                  </div>
 		               </div>
 		               <a>Basic Tax Service: <br/></a>
@@ -94,7 +102,11 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="lastname" value = "" id="basictaxamt">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basictaxamt" value = "" id="basictaxamt" onblur="getFinalTotal('totalWtax');" onkeyup="checkTime(this); totalHours(this); totalRate('basictaxrate' ); subTotal(this.id, 'basictaxrate', 'basictaxtotal'); getFinalTotal('totalWtax');">
+		                  </div>
+								<div class="box">
+		                     <a class = "minibox">Cost Before Tax<br/></a>
+		                     <input disabled="true" placeholder="$0" style = "align:right;" type="text" name="basictaxtotal" value = "" id="basictaxtotal">
 		                  </div>
 		               </div>
 		               <a>Premium Accounting Service: <br/></a>
@@ -105,7 +117,11 @@
 		                  </div>
 		                  <div class="box">
 		                     <a￼ class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="premacctamt" value = "" id="premacctamt" onblur="getFinalTotal('totalWtax');" onkeyup="checkTime(this); totalHours(this); totalRate('premacctrate' ); subTotal(this.id, 'premacctrate', 'premaccttotal'); getFinalTotal('totalWtax');">
+		                  </div>
+								<div class="box">
+		                     <a￼ class = "minibox">Cost Before Tax<br/></a>
+		                     <input disabled="true" placeholder="$0" style = "align:right;" type="text" name="premaccttotal" value = "" id="premaccttotal">
 		                  </div>
 		               </div>
 		               <a>Basic Accounting Service: <br/></a>
@@ -116,28 +132,30 @@
 		                  </div>
 		                  <div class="box">
 		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt">
+		                     <input placeholder="Time Needed(in hours)" style = "align:right;" type="text" name="basicacctamt" value = "" id="basicacctamt" onblur="getFinalTotal('totalWtax');" onkeyup="checkTime(this); totalHours(this); totalRate('basicacctrate' ); subTotal(this.id, 'basicacctrate', 'basicaccttotal'); getFinalTotal('totalWtax');">
+		                  </div>
+								<div class="box">
+		                     <a class = "minibox">Cost Before Tax<br/></a>
+		                     <input disabled="true" placeholder="$0" style = "align:right;" type="text" name="basicaccttotal" value = "" id="basicaccttotal">
 		                  </div>
 		               </div>
 		               <a style="text-align:center;">==========================</a><br/>
 		               <a>Totals: <br/></a>
 		               <div class="container">
-		                  <div class="box">
-		                     <a class = "minibox">Service Price (per Hour):<br/></a>
-		                     <input  disabled="true" placeholder="" style = "align:right;" type="text" name="totalamt" value = "" id="totalamt">
-		                  </div>
-		                  <div class="box">
-		                     <a class = "minibox">Estimated Hours Needed:<br/></a>
-		                     <input disabled="true"placeholder=""style = "align:right;"type="text"name="totalhour"value = ""id="totalhour">
-		                  </div>
+								<div class="box">
+									<a class = "minibox">Total Cost After Tax:<br/></a>
+									<input disabled="true"placeholder=""style = "align:right;"type="text"name="totalWtax"value = ""id="totalWtax" >
+								</div>
 		               </div>
 		            <br/>
+						<input type="reset" id="form2Reset" text="Reset"/>
+						<input type="submit" id="form2Submit" text="Submit" onmousedown="thanks()"/>
 		            </form>
 		            </div>
 		            </div>
 		            <td style="text-align:center">
-		            <input type="button" class="button" id = "calc" onclick="total()" value="Sign Up and Purchase">
-		            <input type="button" class="button" name="reset" value ="Reset" onclick="resetForm()">
+		            <input type="button" class="button" id = "calc" onclick="submitAll(); thanks();" value="Sign Up and Purchase">
+		            <input type="button" class="button" name="reset" value ="Reset All" onclick="resetForm()">
 		            </td>
 		         </div>
 		         <div id="footer">
