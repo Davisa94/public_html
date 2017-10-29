@@ -288,7 +288,6 @@ function checkDate(date, errorElement)
          document.getElementById("cardDateERR").innerHTML = "Invalid Expiration Date</br>";
       }
    }
-
 }
 
 function checkMoney(money)
