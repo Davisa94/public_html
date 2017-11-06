@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT head (title, base?, style?, meta*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT base EMPTY>
+<!ELEMENT meta EMPTY>
+<!ATTLIST base href CDATA #REQUIRED>
+<!ATTLIST base target CDATA #REQUIRED>
+<!ATTLIST meta name CDATA #REQUIRED>
+<!ATTLIST meta content CDATA #REQUIRED>

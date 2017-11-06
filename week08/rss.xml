@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE rss SYSTEM "rss.dtd">
+<rss>
+   <channel>
+      <item>
+         <title>BYU-Idaho</title>
+         <description>
+            BYU-Idaho Center Auditorium: Devotionals are special
+            worship services and an important setting for studying
+            the doctrines and principles of the restored gospel.
+            Each week, speakers and many other individuals strive to provide a
+            meaningful experience where the Spirit can teach and enlighten us.
+         </description>
+         <link>http://calendar.byui.edu/RSSFeeds.aspx?data=3fdei69th52sh0U8OON0aSSRcC%2b6jf%2fPw5KcZ5V1ln0%3d</link>
+         <author>Brigham Young University - Idaho</author>
+      </item>
+   </channel>
+   <channel>
+      <item>
+         <title>Service - Stories from General Conference</title>
+         <description>
+            Service is how we can show love to those around us.
+            Listen to stories of service and how the giver and receiver were blessed.
+         </description>
+         <link>http://feeds.lds.org/~r/StoriesFromGenConf/~3/QYubrzYxEwU/096</link>
+         <author>The Church of Jesus Christ of Latter-day Saints</author>
+      </item>
+   </channel>
+   <channel>
+      <item>
+         <title>Jesus Christ - Stories from General Conference</title>
+         <description>Listen to stories about Jesus Christ's life and ministry.</description>
+         <link>http://feeds.lds.org/~r/StoriesFromGenConf/~3/AAJi_1atf_A/097</link>
+         <author>The Church of Jesus Christ of Latter-day Saints</author>
+      </item>
+   </channel>
+</rss>

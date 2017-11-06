@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE head SYSTEM "head.dtd">
+<head>
+   <title>Teach One Another - Week 08</title>
+   <base href="http://www.byui.edu/" target="_blank"></base>
+   <style>h1 {color:red}</style>
+   <meta name="author" content="Br. Helfrich"></meta>
+   <meta name="class" content="CS 213"></meta>
+   <meta name="activity" content="Teach One Another"></meta>
+   <meta name="problem" content="2"></meta>
+</head>

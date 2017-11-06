@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT playlist (trackList+)>
+<!ELEMENT trackList (track+)>
+<!ELEMENT track (title, location)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ATTLIST base href CDATA #REQUIRED>
+<!ATTLIST base target CDATA #REQUIRED>
+<!ATTLIST meta name CDATA #REQUIRED>
+<!ATTLIST meta content CDATA #REQUIRED>

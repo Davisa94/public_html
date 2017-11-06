@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE playlist SYSTEM "213.08.Teach3.dtd">
+<playlist>
+   <trackList>
+      <track>
+         <title>U2 - All I Want Is You</title>
+         <location>file:///c:/music/all_i_want.mp3</location>
+      </track>
+      <track>
+         <title>U2 - Desire</title>
+         <location>file:///c:/music/desire.mp3</location>
+      </track>
+      <track>
+         <title>U2 - Beautiful Day</title>
+         <location>file:///c:/music/beautiful_day.mp3</location>
+      </track>
+   </trackList>
+</playlist>
