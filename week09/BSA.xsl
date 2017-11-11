@@ -7,7 +7,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <title>Boy Scouts Information</title>
       </head>
       <body>
-         --begin for each
+         <xsl:for-each select="bsa/council/troop">
+            <h2><xsl:value-of select="."/></h2>
          <!-- Begin Scout Table -->
          <table border="2">
             <tr bgcolor="#85a6f0">
@@ -27,6 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </tr>
             </xsl:for-each>
          </table>
+      </xsl:for-each>
       </body>
    </html>
 </xsl:template>
