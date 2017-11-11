@@ -10,7 +10,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          --begin for each
          <!-- Begin Scout Table -->
          <table border="2">
-            <tr bgcolor="rgba(#85a6f0, 0.76)">
+            <tr bgcolor="#85a6f0">
                <th>First Name</th>
                <th>Last Name</th>
                <th>Phone Number</th>
