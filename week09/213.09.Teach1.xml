@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="213.09.Teach1.xsl" ?>
+<classes>
+   <class>CS 124 : Introduction to Software Development</class>
+   <class>CS 165 : Object Oriented Software Development</class>
+   <class>CS 213 : Web Engineering I</class>
+</classes>
