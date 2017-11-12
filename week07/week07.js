@@ -254,12 +254,12 @@ function checkDate(date, errorElement)
    if(date.value == "")
    {
        //console.log("Empty number Field");
-      document.getElementById("errorElement").innerHTML = "Please enter a Card Date</br>";
+      document.getElementById(errorElement).innerHTML = "Please enter a Card Date</br>";
    }
    else
    {
       //resets the error message
-      document.getElementById("errorElement").innerHTML = "";
+      document.getElementById(errorElement).innerHTML = "";
       // Breaks the date down into its components month day and year
       var dateVal = date.value;
       /*****************************************************
@@ -414,7 +414,7 @@ function getFinalTotal(totalElement)
    {
       finalTotal += parseInt(totalArray[key])
    }
-   finalTotal = parseFloat(finalTotal * taxRate);
+   finalTotal += parseFloat(finalTotal * taxRate);
    finalTotal = finalTotal.toFixed(2);
    document.getElementById(totalElement).value = '$' + finalTotal;
 }

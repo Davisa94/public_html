@@ -5,7 +5,7 @@ body{
 #container {
    background-color: rgba(#eeeeee, 0);
 }
-#heading {
+.heading {
    background: rgba(54, 98, 255, 0.47);
    background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13) 100%);
    background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.13) 0%, rgba(54, 98, 255, 0.47) 50%, rgba(59, 113, 251, 0.13) 100%);
@@ -17,11 +17,61 @@ body{
    text-shadow: 1px 2px #558ABB;
    font-size: 180%;
 }
+.heading-left{
+   background: rgba(54, 98, 255, 0.47);
+   background: -moz-linear-gradient(left,rgba(54, 98, 255, 0.47) 0%, rgba(59, 113, 251, 0.13) 50% , rgba(59, 113, 251, 0.02) 100%);
+   background: -webkit-linear-gradient(left,rgba(54, 98, 255, 0.47) 0%, rgba(59, 113, 251, 0.13) 50%, rgba(59, 113, 251, 0.02) 100%);
+   background: -ms-linear-gradient(left,rgba(54, 98, 255, 0.47) 0%, rgba(59, 113, 251, 0.13) 50, rgba(59, 113, 251, 0.02) 100%);
+   background: linear-gradient(to right,rgba(54, 98, 255, 0.47) 0%, rgba(59, 113, 251, 0.13)  50%, rgba(59, 113, 251, 0.02) 100%);
+   font-family: "Bookman", serif;
+   color: #020a14;
+   text-align: left;
+   text-shadow: 1px 2px #558ABB;
+   font-size: 180%;
+}
+.hold{
+   background-color: blue;
+   background: inherit;
+
+}
+.heading-left-small{
+   /*background: rgba(0, 45, 207, 0.47);
+   background: -moz-linear-gradient(left,rgba(0, 45, 207, 0.47) 0%, rgba(38, 65, 135, 0.13) 50% , rgba(59, 113, 251, 0.02) 100%);
+   background: -webkit-linear-gradient(left,rgba(0, 45, 207, 0.47) 0%, rgba(38, 65, 135, 0.13) 50%, rgba(59, 113, 251, 0.02) 100%);
+   background: -ms-linear-gradient(left,rgba(0, 45, 207, 0.47) 0%, rgba(38, 65, 135, 0.13) 50, rgba(59, 113, 251, 0.02) 100%);
+   background: linear-gradient(to right,rgba(0, 45, 207, 0.47) 0%, rgba(38, 65, 135, 0.13)  50%, rgba(59, 113, 251, 0.02) 100%);*/
+   font-family: "Bookman", serif;
+   color: #020a14;
+   text-align: left;
+   text-shadow: 1px 2px #4977a1;
+   font-size: 110%;
+}
 p.heading{
    font-size: 75%;
    font-style: italic;
    margin-top: -30px;
 
+}
+
+table{
+   border-style: groove;
+   border-color: rgba(20, 0, 255, 0.83);
+   background-color: inherit;
+   text-align: center;
+   height: auto;
+   width: 1200px;
+   text-shadow: 1px 1px #558ABB;
+}
+
+tr{
+   border-color: rgba(20, 0, 255, 0.83);
+   border-style: solid;
+   border-spacing:inherit;
+}
+td{
+   border-color: rgba(20, 0, 255, 0.83);
+   border-style: solid;
+   border-spacing:inherit;
 }
 #form{
    background: rgba(54, 152, 255, 0.47);
@@ -39,9 +89,19 @@ p.heading{
    font-size: 75%;
    float: center;
 }
+.fill{
+   border-color: black;
+   border-width: 2px;
+   border-style: solid;
+   display: inline-table;
+   /*background-color: lightblue;*/
+   box-decoration-break: clone;
+   padding-bottom: 8px;
+   margin-bottom: 6px;
+}
 .container{
    display: flex;
-
+   background-color: inherit;
 }
 .box{
    flex-grow: auto;
@@ -52,6 +112,12 @@ p.heading{
 .two{
    align-items: stretch;
    margin-left: 100px;
+   flex grow:auto;
+}
+.one{
+   align
+   align-items: stretch;
+   margin-left: 0px;
    flex grow:auto;
 }
 .button{

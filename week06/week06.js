@@ -64,7 +64,7 @@ function checkAge(age)
    }
 
 }
-
+"/-/"
 /**************************************
 * Validates that a proper Social
 * security number is entered
