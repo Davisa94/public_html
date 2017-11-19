@@ -14,13 +14,13 @@
    </head>
    <body style = "text-align: center;">
       <h1> Select a country: </h1>
-		<select onchange="loadFile(this.value, countryData);">
+		<select onchange="loadFile(this.value, 'countryData');">
 			<option value="usa.txt">USA</option>
 			<option value="canada.txt" >Canada</option>
 			<option value="mexico.txt">Mexico</option>
 			<option value="russia.txt">Russia</option>
 		</select>
-		<span id="countryData"> </span>
+		<pre id="countryData"> </pre>
 		<div id="supernav">
 			<a href="../index.html" class="button">CS 213 Assignments</a>
 		</div>
