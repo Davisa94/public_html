@@ -13,4 +13,3 @@ function loadFile(value, loadArea){
   xhttp.open("GET", filename, true);
   xhttp.send();
 }
-}
