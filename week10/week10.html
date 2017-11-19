@@ -9,10 +9,18 @@
    </style>
       <meta charset = "utf-8" />
       <title> Austin Davis's Assignment 10 </title>
+		<script type="text/javascript" src="week10.js"></script>
 		<link rel="stylesheet" type="text/css" href="../styles.css"/>
    </head>
    <body style = "text-align: center;">
-      <h1> Assignment #10 </h1>
+      <h1> Select a country: </h1>
+		<select onchange="loadFile(this.value, countryData);">
+			<option value="usa.txt">USA</option>
+			<option value="canada.txt" >Canada</option>
+			<option value="mexico.txt">Mexico</option>
+			<option value="russia.txt">Russia</option>
+		</select>
+		<div id="countryData"></div>
 		<a href="rss.xml" class="button">Problem 1 XML</a>
 		<a href="rss.txt" class="button">Problem 1 DTD</a>
 		<br/>
