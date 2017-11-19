@@ -7,7 +7,7 @@ function loadFile(value, loadArea){
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      if (this.responseText != NULL){
+      if (this.responseText != null){
          document.getElementById(loadArea).innerHTML = this.responseText;
           }
     }
