@@ -13,14 +13,35 @@
 		<link rel="stylesheet" type="text/css" href="../styles.css"/>
    </head>
    <body style = "text-align: center;">
-      <h1> Select a country: </h1>
-		<select onchange="loadFile(this.value, 'countryData');">
-			<option value="usa.txt">USA</option>
-			<option value="canada.txt" >Canada</option>
-			<option value="mexico.txt">Mexico</option>
-			<option value="russia.txt">Russia</option>
-		</select> 
-		<pre id="countryData"> </pre>
+		<div class="container-center">
+			<div class="box blue-gradient">
+				<h1 class="heading">Top Ten Largest Cities</h1>
+				<h2 class="heading-left-small"> Select a country: </h2><br/>
+				<select onchange="loadFile(this.value, 'countryData', 'titlebar');">
+					<option value="usa.txt">USA</option>
+					<option value="canada.txt" >Canada</option>
+					<option value="mexico.txt">Mexico</option>
+					<option value="russia.txt">Russia</option>
+				</select>
+				<br/><br/><br/>
+				<div id="titlebar" style="visibility:hidden" class="container-center">
+					<p class="slim box heading center">City Name</p>
+					<p class="slim box heading center filler"></p>
+					<p class="slim box heading center">Population</p>
+				</div>
+
+				<pre style="font-size=800%" id="countryData"> </pre>
+			</div>
+			<div class="box blue-gradient">
+				<h1 class="heading">Student Information</h1>
+				<h2 class="heading-left-small">Please enter a filename:</h2>
+				<input type="text" id="fileField"name="" value="json.txt">
+				<br/><br/><br/>
+					<button class=button type="button" name="button" onclick="loadFile(fileField.value,'dyna-table', 'true'); //parseFile('dyna-table')">Read File</button>
+					<table style="visibility: hidden;" id="dyna-table"></table>
+			</div>
+		</div>
+
 		<div id="supernav">
 			<a href="../index.html" class="button">CS 213 Assignments</a>
 		</div>
